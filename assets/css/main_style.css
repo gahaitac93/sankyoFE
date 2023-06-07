@@ -27,12 +27,16 @@ height:auto;
 
 
 body {
-    color: #666;
-     font-family: 'Sofia Pro', sans-serif; 
+    /* color: #666; */
+    font-family: 'Sofia Pro', sans-serif; 
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
     line-height: 1.6;
+}
+
+.breadcumb-inner li, .breadcumb-inner li a, .breadcumb-inner ul, .breadcumb-inner ul span a, .entry-summary span.posted_in a, .entry-summary span.tagged_as a, .footer-menu ul li a, .logonit-blog-meta-right a, .logonit-blog-meta-right span, .twr_product_sidebar a, .witr_breadcumb_shop ul li span a, body, h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
+    color: #030925;
 }
 
 p {
