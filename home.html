@@ -96,7 +96,7 @@
     <link rel="stylesheet" id="wp-block-library-css" href="https://demo.themexbd.com/wpt/logonit/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2" type="text/css" media="all" />
     <link rel="stylesheet" id="classic-theme-styles-css" href="https://demo.themexbd.com/wpt/logonit/wp-includes/css/classic-themes.min.css?ver=6.2.2" type="text/css" media="all" />
     <style id="global-styles-inline-css" type="text/css">
-        body {
+        /* body {
             --wp--preset--color--black: #000000;
             --wp--preset--color--cyan-bluish-gray: #abb8c3;
             --wp--preset--color--white: #ffffff;
@@ -431,7 +431,7 @@
         .wp-block-pullquote {
             font-size: 1.5em;
             line-height: 1.6;
-        }
+        } */
     </style>
     <style id="extendify-gutenberg-patterns-and-templates-utilities-inline-css" type="text/css">
         .ext-absolute {
@@ -3580,8 +3580,8 @@ We use it here to ensure columns blocks display well across themes.
             font-display: swap;
         }
 
-        .logonit_menu>ul>li>a,
-        .logonit_menu ul .sub-menu li a {
+        .sk_menu>ul>li>a,
+        .sk_menu ul .sub-menu li a {
             font-display: swap;
         }
 
@@ -3636,33 +3636,31 @@ We use it here to ensure columns blocks display well across themes.
             background-color: #102033;
         }
 
-        .logonit_menu>ul>li>a,
-        .heading_style_2 .logonit_menu>ul>li>a,
-        .heading_style_3 .logonit_menu>ul>li>a,
-        .heading_style_4 .logonit_menu>ul>li>a,
+        .sk_menu>ul>li>a,
+        .heading_style_2 .sk_menu>ul>li>a,
+        .heading_style_3 .sk_menu>ul>li>a,
+        .heading_style_4 .sk_menu>ul>li>a,
         .witr_search_wh .em-header-quearys .em-quearys-menu i,
         .right_sideber_menu i,
         .main_menu_header_icon i,
         .main_menu_header_address_text h3,
         .main_menu_header_address_text h4 a,
-        .heading_style_5 .logonit_menu>ul>li>a,
+        .heading_style_5 .sk_menu>ul>li>a,
         .mini_shop_content a i {
             font-display: swap;
         }
-
-        .logonit_nav_area.prefix,
         .hbg2 {
             background-color: rgba(0, 90, 255, 0.74);
         }
 
-        .logonit_menu ul .sub-menu li a,
-        .logonit_menu ul .sub-menu li:before {
+        .sk_menu ul .sub-menu li a,
+        .sk_menu ul .sub-menu li:before {
             font-display: swap;
         }
 
-        .logonit_nav_area,
+        .sk_nav_area,
         .trp_nav_area,
-        .transprent-menu .logonit_nav_area {
+        .transprent-menu .sk_nav_area {
             padding-right: 100px;
             padding-left: 100px;
         }
@@ -3779,15 +3777,15 @@ We use it here to ensure columns blocks display well across themes.
     </style>
     <style>
         /* Intro video css */
-        .logonit_menu {
+        .sk_menu {
             display: flex;
         }
 
-        .logonit_nav_area.prefix .logonit_menu>ul>li.current>a {
+        .sk_nav_area.prefix .sk_menu>ul>li.current>a {
             color: red;
         }
 
-        .logonit_menu>ul>li>a {
+        .sk_menu>ul>li>a {
             margin: 35px 12px;
         }
 
@@ -3831,7 +3829,7 @@ We use it here to ensure columns blocks display well across themes.
             z-index: 1;
         }
 
-        .logonit_nav_area {
+        .sk_nav_area {
             background-color: transparent !important;
         }
 
@@ -3852,7 +3850,24 @@ We use it here to ensure columns blocks display well across themes.
                 margin-top: 75vh !important;
             }
         }
+        .sk_nav_area.scroll_fixed {
+            background-color: rgba(0, 90, 255, 0.74) !important;
+        }
     </style>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            var navarea = document.querySelector(".sk_nav_area");
+            var videoHeight = document.querySelector("video").offsetHeight;
+            /* If you scroll past the video, add the "scroll_fixed" class to the navarea */
+            if (document.body.scrollTop > videoHeight || document.documentElement.scrollTop > videoHeight) {
+                navarea.classList.add("scroll_fixed");
+            } else { /* Else, remove it */
+                navarea.classList.remove("scroll_fixed");
+            }
+        }
+    </script>
 </head>
 
 <body class="elementor-kit-8">
@@ -3895,7 +3910,7 @@ We use it here to ensure columns blocks display well across themes.
             <div class="tx_relative_m">
                 <div class="mainmenu_width_tx">
                     <div class="logonit-main-menu one_page hidden-xs hidden-sm witr_h_h10 scroll-to-fixed-fixed" style="z-index: 1000; position: static; top: 0px; margin-left: 0px; width: 1519.2px; left: 0px;">
-                        <div class="logonit_nav_area scroll_fixed postfix prefix">
+                        <div class="sk_nav_area postfix prefix">
                             <div class="container">
                                 <div class="row logo-left">
                                     <div class="col-md-3 col-sm-3 col-xs-4">
@@ -3909,9 +3924,9 @@ We use it here to ensure columns blocks display well across themes.
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-9 col-xs-8">
-                                        <nav class="logonit_menu">
+                                        <nav class="sk_menu">
                                             <ul class="sub-menu">
-                                                <li><a href="./home.html">Home</a></li>
+                                                <li class="current"><a href="./home.html">Home</a></li>
                                                 <li><a href="./about-us.html">About us</a></li>
                                                 <li><a href="./service.html">Service</a></li>
                                                 <li><a href="./equipment.html">Equipment</a></li>
@@ -5531,7 +5546,7 @@ We use it here to ensure columns blocks display well across themes.
     </div>
     <!-- MAIN WRAPPER END -->
 
-    <link rel="stylesheet" id="redux-custom-fonts-css-css" href="//demo.themexbd.com/wpt/logonit/wp-content/uploads/redux/custom-fonts/fonts.css?ver=1685627462" type="text/css" media="all" />
+    <!-- <link rel="stylesheet" id="redux-custom-fonts-css-css" href="https://demo.themexbd.com/wpt/logonit/wp-content/uploads/redux/custom-fonts/fonts.css?ver=1685627462" type="text/css" media="all" /> -->
     <link rel="stylesheet" id="wvideo-css" href="https://demo.themexbd.com/wpt/logonit/wp-content/plugins/witr-helper-plugin/assets/css/maincss/wvideo.min.css?ver=6.2.2" type="text/css" media="all" />
     <link rel="stylesheet" id="wtextwidget-css" href="https://demo.themexbd.com/wpt/logonit/wp-content/plugins/witr-helper-plugin/assets/css/maincss/wtextwidget.min.css?ver=6.2.2" type="text/css" media="all" />
     <link rel="stylesheet" id="wservice-css" href="https://demo.themexbd.com/wpt/logonit/wp-content/plugins/witr-helper-plugin/assets/css/maincss/wservice.min.css?ver=6.2.2" type="text/css" media="all" />
