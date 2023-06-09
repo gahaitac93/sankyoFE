@@ -1,0 +1,77 @@
+/* Intro video css */
+.logonit_menu {
+    display: flex;
+}
+
+.logonit_nav_area.prefix .logonit_menu>ul>li.current>a {
+    color: red;
+}
+
+.logonit_menu>ul>li>a {
+    margin: 35px 12px;
+}
+
+#myVideo {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+.overlayText {
+    position: absolute;
+    background: transparent;
+    color: #f1f1f1;
+    top: 27%;
+    left: 15%;
+}
+@media (max-width: 800px) {
+    .overlayText {
+        top: 40%;
+        left: 10%;
+    }
+    .witr_btn {
+        padding: 10px 15px
+    }
+}
+@media (min-width: 801px) {
+    .topText {
+        font-size: 2rem;
+    }
+}
+.logonit-main-menu {
+    position: relative;
+}
+
+.intro-video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.logonit_nav_area {
+    background-color: transparent !important;
+}
+
+.elementor-2656 .elementor-element.elementor-element-a946bbc {
+    margin-top: 100vh !important;
+    padding: 0 !important;
+}
+@media (max-width: 768px) {
+    .intro-video {
+        position: relative;
+    }
+    .elementor-2656 .elementor-element.elementor-element-a946bbc {
+        margin-top: 20vh !important;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .elementor-2656 .elementor-element.elementor-element-a946bbc {
+        margin-top: 75vh !important;
+    }
+}
+.logonit_nav_area.scroll_fixed {
+    background-color: rgba(0, 90, 255, 0.74) !important;
+}
