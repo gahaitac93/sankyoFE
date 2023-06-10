@@ -67,11 +67,21 @@
         margin-top: 20vh !important;
     }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+/* @media (min-width: 769px) and (max-width: 1024px) {
     .elementor-2656 .elementor-element.elementor-element-a946bbc {
         margin-top: 75vh !important;
     }
-}
+} */
 .logonit_nav_area.scroll_fixed {
     background-color: rgba(0, 90, 255, 0.74) !important;
+}
+/* who we are */
+.elementor-2656 .elementor-element.elementor-element-6f44bbc > .elementor-widget-container {
+    padding: 210px 0px 190px 0px !important;
+    background-image: url("./who we are.jpg") !important;
+}
+@media (min-width: 1024px) {
+    .elementor-2656 .elementor-element.elementor-element-6f44bbc > .elementor-widget-container {
+        
+    }
 }
